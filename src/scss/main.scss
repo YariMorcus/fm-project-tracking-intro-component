@@ -19,14 +19,17 @@ RULES FOR THIS FILE
 
 Imports all modules
 
-Project:    [project name]
+Project:    Project tracking intro component
 Version:    1.0
 Assigned to:    Yari Morcus
 Primary use:    Portfolio project
 -------------------------------------------------------------------*/
 
 // Import base/_index.scss entrypoint file
-@use 'base' as b;
+@use 'base';
 
 // Import components/_index.scss entrypoint file
-@use 'components' as c;
+@use 'components';
+
+// Import layout/_index.scss entrypoint file
+@use 'layout';
