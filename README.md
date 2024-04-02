@@ -18,8 +18,9 @@ _Source: [Frontend Mentor challenge page](https://www.frontendmentor.io/challeng
     - [User stories and features](#user-stories-and-features)
   - [Author](#author)
 
-[//]: # '## Deployment status'
-[//]: # 'In case of netlify: insert deployment status on this line'
+## Deployment status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3a1378c6-093b-4f8e-b4fa-9cb6b760cec0/deploy-status)](https://app.netlify.com/sites/project-tracking-intro-yari-morcus/deploys)
 
 ## Overview
 
@@ -34,8 +35,7 @@ The users should be able to:
 ### Links
 
 - Solution URL: [Open GitHub repository](https://github.com/YariMorcus/fm-project-tracking-intro-component)
-
-[//]: # 'Insert following when online: - Live Site URL: [open Netlify / GitHub page][fill in link]'
+- Live Site URL: [open Netlify](https://project-tracking-intro-yari-morcus.netlify.app)
 
 ## Project information
 
