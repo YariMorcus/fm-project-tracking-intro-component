@@ -55,3 +55,11 @@
     border: 0.1rem solid hsl(231, 7%, 65%); // TODO change color to non-existing var.
   }
 }
+
+.js {
+  .navbar {
+    &__nav {
+      display: none;
+    }
+  }
+}
