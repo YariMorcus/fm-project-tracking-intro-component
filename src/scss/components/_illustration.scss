@@ -1,5 +1,14 @@
 .illustration {
   &-devices-img {
+    display: none;
     margin-bottom: 6rem;
+  }
+}
+
+.js {
+  .illustration {
+    &-devices-img {
+      display: block;
+    }
   }
 }
