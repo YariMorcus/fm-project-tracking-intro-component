@@ -35,8 +35,15 @@ main {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  :not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  &:focus-visible {
+    outline-color: v.$very-dark-blue;
+    outline-offset: 0.5rem;
+  }
 }
 
 /* Make images easier to work with */
