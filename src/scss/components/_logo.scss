@@ -1,0 +1,8 @@
+.logo {
+  margin-left: -0.6rem; // fix alignment of logo to left (due to place-content)
+  width: 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+}
