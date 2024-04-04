@@ -23,10 +23,13 @@
 
   &__item:not(:first-child, :last-child),
   &__divider {
-    margin: 2.5rem;
+    margin: 1rem 0;
   }
 
   &__link {
+    padding: 1rem;
+    display: inline-block;
+    width: 100%;
     font: bold t.$body-copy-font-size 'Barlow Condensed';
     color: v.$very-dark-blue;
     text-decoration: none;
@@ -35,6 +38,13 @@
 
     &--login {
       color: v.$grayish-blue;
+    }
+
+    &:focus-visible {
+      padding: 1rem;
+      display: inline-block;
+      border-radius: 0.6rem;
+      outline: 0.2rem solid v.$very-dark-blue;
     }
   }
 
