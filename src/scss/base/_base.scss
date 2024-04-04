@@ -4,6 +4,8 @@
 // Import mixins
 @use '../abstracts/mixins' as m;
 
+@use './typography' as t;
+
 /* Set core root defaults */
 html {
   font-size: 10px;
@@ -15,16 +17,19 @@ html {
 
 /* Set core body defaults */
 body {
+  margin: 3rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   text-rendering: optimizeSpeed;
   font-family: 'Manrope', sans-serif;
+  font-size: t.$body-copy-font-size;
   line-height: 1.5;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex: 1;
 }
