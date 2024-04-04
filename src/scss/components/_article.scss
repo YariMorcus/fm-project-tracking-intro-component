@@ -34,5 +34,14 @@
     margin-bottom: 2rem;
     padding-right: 4rem;
     font-size: 2.2rem;
+
+    &--preview {
+      width: 50%;
+      color: v.$grayish-blue;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 4.133rem; // height of container
+      letter-spacing: 1px;
+    }
   }
 }
