@@ -1,0 +1,18 @@
+// Import modules
+@use '../abstracts/variables' as v;
+
+.btn {
+  font-family: 'Barlow Condensed';
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &__primary {
+    padding: 1.2rem;
+    width: 50%;
+    color: v.$light-grayish-blue;
+    background-color: v.$red;
+    border-radius: 6px;
+    border: none;
+  }
+}
