@@ -7,6 +7,10 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 
+  &:focus-visible {
+    outline-color: v.$very-dark-blue;
+  }
+
   &__primary {
     padding: 1.2rem;
     width: 50%;
