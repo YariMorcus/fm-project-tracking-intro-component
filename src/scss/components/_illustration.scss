@@ -1,5 +1,5 @@
 .illustration {
-  &-devices-img {
+  &__devices-img {
     display: none;
     margin-bottom: 6rem;
   }
@@ -7,8 +7,14 @@
 
 .js {
   .illustration {
-    &-devices-img {
+    overflow-x: hidden;
+
+    &__devices-img {
+      position: relative;
+      left: 1rem;
       display: block;
+      width: 50rem;
+      max-width: initial;
     }
   }
 }
