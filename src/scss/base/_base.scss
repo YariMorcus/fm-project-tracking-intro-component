@@ -32,14 +32,10 @@ body {
     right: 0;
     display: block;
     width: 50vw;
-    height: 27rem;
+    height: 38rem;
     background-color: v.$light-grayish-blue;
     border-bottom-left-radius: 7rem;
     z-index: -1;
-
-    @include m.breakpoint-sm {
-      height: 45rem;
-    }
   }
 }
 
@@ -79,5 +75,15 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.js {
+  body::after {
+    height: 27rem;
+
+    @include m.breakpoint-sm {
+      height: 45rem;
+    }
   }
 }
