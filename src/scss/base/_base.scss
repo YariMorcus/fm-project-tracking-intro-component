@@ -24,6 +24,19 @@ body {
   font-family: 'Manrope', sans-serif;
   font-size: t.$body-copy-font-size;
   line-height: 1.5;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50vw;
+    height: 45rem;
+    background-color: v.$light-grayish-blue;
+    border-bottom-left-radius: 7rem;
+    z-index: -1;
+  }
 }
 
 main {
