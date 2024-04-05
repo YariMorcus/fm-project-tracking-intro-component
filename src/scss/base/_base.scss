@@ -18,6 +18,9 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  max-width: 50rem;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   text-rendering: optimizeSpeed;
