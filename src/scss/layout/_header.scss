@@ -1,9 +1,12 @@
 // Import modules
 @use '../abstracts/mixins' as m;
 
+.header {
+  margin: 3rem 3rem 5rem;
+}
+
 .js {
   .header {
-    margin: 3rem 3rem 5rem;
     display: flex;
     justify-content: space-between;
 
