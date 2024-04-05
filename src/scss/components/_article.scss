@@ -3,6 +3,7 @@
 @use '../abstracts/mixins' as m;
 
 .article {
+  margin: 0 3rem;
   font-family: 'Barlow Condensed';
 
   &__new {
