@@ -1,5 +1,6 @@
 // Import modules
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 .article {
   font-family: 'Barlow Condensed';
@@ -33,23 +34,32 @@
 
   &__demo-container {
     margin-bottom: 6rem;
-    display: flex;
-    justify-content: space-between;
+
+    @include m.breakpoint-sm {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__text {
     margin-bottom: 2rem;
-    padding-right: 4rem;
     font-size: 2.2rem;
     color: v.$dark-grayish-blue;
 
     &--preview {
-      width: 50%;
       color: v.$grayish-blue;
       text-transform: uppercase;
       text-align: center;
       line-height: 4.133rem; // height of container
       letter-spacing: 1px;
+
+      @include m.breakpoint-sm {
+        width: 50%;
+      }
+    }
+
+    @include m.breakpoint-sm {
+      padding-right: 4rem;
     }
   }
 }

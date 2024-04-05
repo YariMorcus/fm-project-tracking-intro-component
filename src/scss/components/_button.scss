@@ -1,5 +1,6 @@
 // Import modules
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 .btn {
   font-family: 'Barlow Condensed';
@@ -13,10 +14,14 @@
 
   &__primary {
     padding: 1.2rem;
-    width: 50%;
+    width: 100%;
     color: v.$light-grayish-blue;
     background-color: v.$red;
     border-radius: 6px;
     border: none;
+
+    @include m.breakpoint-sm {
+      width: 50%;
+    }
   }
 }
