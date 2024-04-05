@@ -1,20 +1,35 @@
+// Import modules
+@use '../abstracts/mixins' as m;
+
 .illustration {
   &__devices-img {
     display: none;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+
+    @include m.breakpoint-sm {
+      margin-bottom: 10rem;
+    }
   }
 }
 
 .js {
   .illustration {
+    margin: 0 3rem;
     overflow-x: hidden;
 
     &__devices-img {
-      position: relative;
-      left: 1rem;
       display: block;
-      width: 50rem;
-      max-width: initial;
+
+      @include m.breakpoint-sm {
+        position: relative;
+        left: 1rem;
+        width: 50rem;
+        max-width: initial;
+      }
+    }
+
+    @include m.breakpoint-sm {
+      margin: initial;
     }
   }
 }
