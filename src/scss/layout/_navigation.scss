@@ -9,7 +9,7 @@
   }
 
   &__nav {
-    margin-bottom: 4rem;
+    margin-bottom: 0;
     padding: 2.5rem;
     list-style: none;
     border-radius: 0.4rem;
@@ -60,6 +60,7 @@
 .js {
   .navbar {
     &__nav {
+      margin-bottom: 4rem;
       display: none;
     }
 
