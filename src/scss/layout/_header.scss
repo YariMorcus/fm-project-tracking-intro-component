@@ -1,7 +1,14 @@
+// Import modules
+@use '../abstracts/mixins' as m;
+
 .js {
   .header {
-    margin: 3rem 3rem 6rem;
+    margin: 3rem 3rem 5rem;
     display: flex;
     justify-content: space-between;
+
+    @include m.breakpoint-sm {
+      margin: 3rem 3rem 6rem;
+    }
   }
 }
