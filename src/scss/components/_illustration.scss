@@ -15,13 +15,14 @@
 .js {
   .illustration {
     margin: 0 3rem;
+    height: 20rem;
     overflow-x: hidden;
 
     &__devices-img {
+      position: absolute;
       display: block;
 
       @include m.breakpoint-sm {
-        position: relative;
         left: 0.5rem;
         width: 50rem;
         max-width: initial;
@@ -30,6 +31,7 @@
 
     @include m.breakpoint-sm {
       margin: initial;
+      height: 34.4rem;
     }
   }
 }
