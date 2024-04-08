@@ -18,7 +18,7 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  max-width: 50rem;
+  max-width: 115rem;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -39,12 +39,17 @@ body {
     background-color: v.$light-grayish-blue;
     border-bottom-left-radius: 7rem;
     z-index: -1;
+
+    @include m.breakpoint-lg {
+      width: 48vw;
+    }
   }
 }
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   flex: 1;
 }
@@ -87,5 +92,12 @@ img {
     @include m.breakpoint-sm {
       height: 45rem;
     }
+  }
+}
+
+// TODO create new SCSS file for utility class
+.mr-10-lg {
+  @include m.breakpoint-lg {
+    margin-right: 10rem;
   }
 }
