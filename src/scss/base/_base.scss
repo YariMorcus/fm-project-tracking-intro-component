@@ -96,8 +96,8 @@ img {
 }
 
 // TODO create new SCSS file for utility class
-.mr-10-lg {
+.mr-3-lg {
   @include m.breakpoint-lg {
-    margin-right: 10rem;
+    margin-right: 3rem;
   }
 }
