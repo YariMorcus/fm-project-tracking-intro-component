@@ -18,18 +18,22 @@
     }
 
     @include m.breakpoint-md {
-      position: absolute;
-      top: 10rem;
-      right: 0;
-      width: 70rem;
-      height: 50rem;
-      background-position: right 2rem top 6rem;
-      background-size: 51rem;
+      background-position: center;
+      background-size: contain;
     }
 
     @include m.breakpoint-lg {
+      position: absolute;
+      right: 0;
+      width: 70rem;
+      height: 50rem;
       top: initial;
       margin-bottom: 17rem;
+      background-position: right -21rem center;
+      background-size: 75rem;
+    }
+
+    @include m.breakpoint-xl {
       background-position: right -27rem center;
       background-size: 95rem;
     }
