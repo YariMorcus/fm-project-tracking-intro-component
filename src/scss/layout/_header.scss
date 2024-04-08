@@ -14,5 +14,13 @@
     @include m.breakpoint-sm {
       margin: 3rem;
     }
+
+    @include m.breakpoint-lg {
+      margin: 5rem 6rem;
+    }
+
+    @include m.breakpoint-xl {
+      margin-bottom: 15rem;
+    }
   }
 }
