@@ -31,6 +31,11 @@
     margin-bottom: 2rem;
     font-size: 4rem;
     line-height: 1;
+
+    @include m.breakpoint-lg {
+      margin-bottom: 3rem;
+      font-size: 6.5rem;
+    }
   }
 
   &__demo-container {
@@ -39,6 +44,10 @@
     @include m.breakpoint-sm {
       display: flex;
       justify-content: space-between;
+    }
+
+    @include m.breakpoint-lg {
+      justify-content: initial;
     }
   }
 
@@ -53,14 +62,16 @@
       text-align: center;
       line-height: 4.133rem; // height of container
       letter-spacing: 1px;
-
-      @include m.breakpoint-sm {
-        width: 50%;
-      }
     }
 
     @include m.breakpoint-sm {
       padding-right: 4rem;
+    }
+
+    @include m.breakpoint-lg {
+      margin-bottom: 5rem;
+      padding-right: 25rem;
+      width: initial;
     }
   }
 }
