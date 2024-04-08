@@ -2,36 +2,36 @@
 @use '../abstracts/mixins' as m;
 
 .illustration {
-  &__devices-img {
-    display: none;
-    margin-bottom: 5rem;
+  &.devices {
+    width: 100%;
+    height: 18rem;
+    background-position-x: center;
+    background-size: 80%;
+    background-image: url('../img/illustration-devices.svg');
+    background-repeat: no-repeat;
 
     @include m.breakpoint-sm {
-      margin-bottom: 10rem;
+      margin-bottom: 5rem;
+      height: 30rem;
+      background-position: 1rem;
+      background-size: 135%;
     }
-  }
-}
 
-.js {
-  .illustration {
-    margin: 0 3rem;
-    height: 20rem;
-    overflow-x: hidden;
-
-    &__devices-img {
+    @include m.breakpoint-md {
       position: absolute;
-      display: block;
-
-      @include m.breakpoint-sm {
-        left: 0.5rem;
-        width: 50rem;
-        max-width: initial;
-      }
+      top: 10rem;
+      right: 0;
+      width: 70rem;
+      height: 50rem;
+      background-position: right 2rem top 6rem;
+      background-size: 51rem;
     }
 
-    @include m.breakpoint-sm {
-      margin: initial;
-      height: 34.4rem;
+    @include m.breakpoint-lg {
+      top: initial;
+      margin-bottom: 17rem;
+      background-position: right -27rem center;
+      background-size: 95rem;
     }
   }
 }
