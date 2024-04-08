@@ -1,6 +1,11 @@
+// Import modules
+@use '../abstracts/mixins' as m;
+
 .section {
   &.introduction {
-    position: relative;
-    overflow-x: hidden;
+    @include m.breakpoint-lg {
+      width: 50%;
+      margin-right: auto;
+    }
   }
 }
