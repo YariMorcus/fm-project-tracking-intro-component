@@ -14,14 +14,19 @@
 
   &__primary {
     padding: 1.2rem;
-    width: 100%;
     color: v.$light-grayish-blue;
     background-color: v.$red;
     border-radius: 6px;
     border: none;
+    width: 100%;
 
     @include m.breakpoint-sm {
       width: 50%;
+    }
+
+    @include m.breakpoint-lg {
+      margin-bottom: 10rem;
+      width: initial;
     }
   }
 }
