@@ -80,5 +80,9 @@
       padding-right: 25rem;
       width: initial;
     }
+
+    @include m.breakpoint-xl {
+      padding-right: 30rem;
+    }
   }
 }
