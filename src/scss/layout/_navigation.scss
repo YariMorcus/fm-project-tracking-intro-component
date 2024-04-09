@@ -73,11 +73,10 @@
     }
 
     &:focus-visible {
-      padding: 1rem;
       display: inline-block;
-      border-radius: 0.6rem;
       outline: 0.2rem solid v.$very-dark-blue;
-      outline-offset: initial;
+      outline-offset: 0.6rem;
+      border-radius: 0.1rem;
     }
   }
 }
