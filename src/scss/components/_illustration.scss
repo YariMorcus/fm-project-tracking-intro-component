@@ -24,7 +24,6 @@
 
     @include m.breakpoint-lg {
       position: absolute;
-      top: 17rem;
       right: 0;
       width: 70rem;
       height: 50rem;
@@ -35,6 +34,14 @@
     @include m.breakpoint-xl {
       background-position: right -27rem center;
       background-size: 95rem;
+    }
+  }
+}
+
+.js {
+  .illustration.devices {
+    @include m.breakpoint-lg {
+      top: 17rem;
     }
   }
 }
