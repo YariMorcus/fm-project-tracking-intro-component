@@ -39,7 +39,7 @@
     margin-left: 0.5rem;
     border: 0.1rem solid hsl(231, 7%, 65%); // TODO change color to non-existing var.
 
-    @include m.breakpoint-lg {
+    @include m.breakpoint-md {
       border-width: 0.2rem;
       border-radius: 100%;
     }
