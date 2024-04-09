@@ -1,24 +1,55 @@
 // Import modules
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
+@use 'sass:color';
 
 .btn {
   font-family: 'Barlow Condensed';
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
+  cursor: pointer;
 
   &:focus-visible {
     outline-color: v.$very-dark-blue;
   }
 
+  &__text {
+    position: relative;
+    transition: 0.5s;
+  }
+
   &__primary {
+    position: relative;
+    overflow: hidden;
     padding: 1.2rem;
     color: v.$light-grayish-blue;
     background-color: v.$red;
     border-radius: 6px;
     border: none;
     width: 100%;
+
+    &:hover {
+      &::before {
+        transform: translate(-5%, 0) skew(-15deg);
+      }
+
+      .btn__text {
+        color: v.$white;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130%;
+      height: 4.7rem;
+      background-color: color.scale(v.$red, $lightness: 25%);
+      transform: translate(-110%, 0) skew(-30deg);
+      transition: 0.5s;
+    }
 
     @include m.breakpoint-sm {
       width: 50%;
