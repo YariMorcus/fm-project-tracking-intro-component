@@ -6,7 +6,8 @@
   width: 4.4rem;
   height: 4.4rem;
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
 
   @include m.breakpoint-md {
     display: flex;
