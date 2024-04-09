@@ -33,6 +33,7 @@
     }
 
     @include m.breakpoint-xl {
+      top: 14rem;
       background-position: right -27rem center;
       background-size: 95rem;
     }

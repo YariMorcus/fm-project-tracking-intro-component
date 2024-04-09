@@ -18,7 +18,7 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  max-width: 115rem;
+  max-width: 130rem;
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -40,16 +40,19 @@ body {
     border-bottom-left-radius: 7rem;
     z-index: -1;
 
-    @include m.breakpoint-lg {
-      width: 48vw;
+    @include m.breakpoint-xl {
+      width: 70rem;
     }
+  }
+
+  @include m.breakpoint-xl {
+    position: relative;
   }
 }
 
 main {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   flex: 1;
 }
