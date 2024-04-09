@@ -24,12 +24,11 @@
 
     @include m.breakpoint-lg {
       position: absolute;
+      top: 17rem;
       right: 0;
       width: 70rem;
       height: 50rem;
-      top: initial;
-      margin-bottom: 17rem;
-      background-position: right -21rem center;
+      background-position: right -21rem top 1rem;
       background-size: 75rem;
     }
 
