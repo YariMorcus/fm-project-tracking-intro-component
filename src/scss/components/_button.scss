@@ -11,7 +11,7 @@
   cursor: pointer;
 
   &:focus-visible {
-    outline-color: v.$very-dark-blue;
+    outline-color: v.$button-outline-color-focus-visible;
   }
 
   &__text {
@@ -23,8 +23,8 @@
     position: relative;
     overflow: hidden;
     padding: 1.2rem;
-    color: v.$light-grayish-blue;
-    background-color: v.$red;
+    color: v.$button-primary-text-color;
+    background-color: v.$button-primary-background-color;
     border-radius: 6px;
     border: none;
     width: 100%;
@@ -35,7 +35,7 @@
       }
 
       .btn__text {
-        color: v.$white;
+        color: v.$button-primary-text-color-hover;
       }
     }
 
@@ -46,7 +46,10 @@
       left: 0;
       width: 130%;
       height: 4.7rem;
-      background-color: color.scale(v.$red, $lightness: 25%);
+      background-color: color.scale(
+        v.$button-primary-background-color,
+        $lightness: 25%
+      );
       transform: translate(-110%, 0) skew(-30deg);
       transition: 0.5s;
     }
