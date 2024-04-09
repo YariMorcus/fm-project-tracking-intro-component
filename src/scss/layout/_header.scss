@@ -3,6 +3,18 @@
 
 .header {
   margin: 3rem 3rem 5rem;
+
+  @include m.breakpoint-md {
+    margin: 5rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 15rem;
+  }
+
+  @include m.breakpoint-lg {
+    margin-bottom: 10rem;
+  }
 }
 
 .js {
@@ -15,12 +27,20 @@
       margin: 3rem;
     }
 
-    @include m.breakpoint-lg {
-      margin: 5rem 6rem 10rem;
+    @include m.breakpoint-md {
+      margin: 5rem 6rem;
     }
 
-    @include m.breakpoint-xl {
-      margin-bottom: 15rem;
+    @include m.breakpoint-lg {
+      margin-bottom: 10rem;
     }
+
+    // @include m.breakpoint-lg {
+    //   margin: 5rem 6rem 10rem;
+    // }
+
+    // @include m.breakpoint-xl {
+    //   margin-bottom: 15rem;
+    // }
   }
 }

@@ -1,6 +1,7 @@
 // Import modules
 @use '../abstracts/variables' as v;
 @use '../base/typography' as t;
+@use '../abstracts/mixins' as m;
 
 .navbar {
   &__toggler {
@@ -15,6 +16,16 @@
     background-color: v.$white;
     border-radius: 0.4rem;
     box-shadow: 0px 8px 20px 0px rgba(91, 95, 113, 0.2);
+
+    @include m.breakpoint-md {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      box-shadow: initial;
+    }
   }
 }
 
@@ -26,6 +37,10 @@
   &__item:not(:first-child, :last-child),
   &__divider {
     margin: 1rem 0;
+
+    @include m.breakpoint-md {
+      margin-left: 2rem;
+    }
   }
 
   &__link {
@@ -55,6 +70,18 @@
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     border: 0.1rem solid hsl(231, 7%, 65%); // TODO change color to non-existing var.
+
+    @include m.breakpoint-lg {
+      border-width: 0.2rem;
+      border-radius: 100%;
+    }
+  }
+
+  &__item,
+  &__divider {
+    @include m.breakpoint-md {
+      margin-left: 2rem;
+    }
   }
 }
 
@@ -63,6 +90,11 @@
     &__nav {
       margin-bottom: 4rem;
       display: none;
+
+      @include m.breakpoint-md {
+        display: flex;
+        margin-bottom: 0;
+      }
     }
 
     &__toggler {
@@ -88,6 +120,10 @@
       &.is-expanded {
         background: center / 2rem 2rem no-repeat url('../img/icon-close.svg')
           transparent;
+      }
+
+      @include m.breakpoint-md {
+        display: none;
       }
     }
   }

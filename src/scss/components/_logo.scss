@@ -1,8 +1,15 @@
+// Import modules
+@use '../abstracts/mixins' as m;
+
 .logo {
   margin-left: -0.6rem; // fix alignment of logo to left (due to place-content)
   width: 4.4rem;
   height: 4.4rem;
   display: flex;
   place-content: center;
-  flex-wrap: wrap;
+
+  @include m.breakpoint-md {
+    display: flex;
+    align-items: center;
+  }
 }
