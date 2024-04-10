@@ -8,7 +8,7 @@
 
   &__new {
     margin-bottom: 2rem;
-    color: v.$grayish-blue;
+    color: v.$article-new-text-color;
     letter-spacing: 0.4rem;
   }
 
@@ -21,9 +21,9 @@
     margin-right: 0.3rem;
     padding: 0.5rem 1rem;
     font-weight: bold;
-    color: v.$white;
+    color: v.$article-new-label-text-color;
     letter-spacing: 0.1rem;
-    background-color: v.$very-dark-blue;
+    background-color: v.$article-new-label-background-color;
     border-radius: 2rem;
 
     @include m.breakpoint-lg {
@@ -57,10 +57,10 @@
   &__text {
     margin-bottom: 2rem;
     font-size: 2.2rem;
-    color: v.$dark-grayish-blue;
+    color: v.$article-text-color;
 
     &--preview {
-      color: v.$grayish-blue;
+      color: v.$article-preview-text-color;
       text-transform: uppercase;
       text-align: center;
       line-height: 4.133rem; // height of container

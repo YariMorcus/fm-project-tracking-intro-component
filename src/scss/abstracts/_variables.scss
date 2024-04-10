@@ -5,9 +5,10 @@
         1.2 Neutral
         1.3 Black and white
         1.4 Navigation
-        1.5 Buttons
-        1.6 Footer
-            1.5.1 States
+        1.5 Article
+        1.6 Buttons
+        1.7 Footer
+            1.7.1 States
 -------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------
@@ -51,7 +52,18 @@ $navbar-nav-link-focus-visible-outline-color: $very-dark-blue;
 
 /*------------------------------------------------------------------
 1. Colors
-    1.5 Buttons
+    1.5 Article
+*/
+
+$article-new-text-color:               $grayish-blue;
+$article-new-label-text-color:         $white;
+$article-new-label-background-color:   $very-dark-blue;
+$article-text-color:                   $dark-grayish-blue;
+$article-preview-text-color:           $grayish-blue;
+
+/*------------------------------------------------------------------
+1. Colors
+    1.6 Buttons
 */
 
 $button-outline-color-focus-visible:    $very-dark-blue;
@@ -63,8 +75,8 @@ $button-primary-text-color-hover:       $white;
 
 /*------------------------------------------------------------------
 1. Colors
-    1.6 Footer
-        1.5.1 States
+    1.7 Footer
+        1.7.1 States
 */
 
 $footer-link-text-color-visited:        hsl(300, 100%, 25%);
