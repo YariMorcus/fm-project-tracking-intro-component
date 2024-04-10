@@ -1,0 +1,8 @@
+// Module imports
+@use '../abstracts/mixins' as m;
+
+.mr-3-sm {
+  @include m.breakpoint-sm {
+    margin-right: 3rem;
+  }
+}
