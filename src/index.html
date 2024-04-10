@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" class="js">
+<html lang="en-us" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +31,11 @@
     <!-- <meta name="twitter:image" content="../screenshot.png"> -->
     <meta name="twitter:image:alt" content="A screenshot of the page">
 
+    <script>
+        // If JS is available, add class to hide navigation menu
+        document.documentElement.classList.add('js');
+    </script>
+
 </head>
 <body>
 
@@ -40,11 +45,11 @@
         </a> <!-- .logo -->
 
         <nav class="navbar" role="navigation">
-            <button id="toggle" class="navbar__toggler" aria-expanded="false" aria-controls="menu">
+            <button id="js-toggle" class="navbar__toggler" aria-expanded="false" aria-controls="js-menu">
                 <span class="navbar__toggler-text">Menu</span>
             </button> <!-- .navbar__toggler-->
 
-            <ul id="menu" class="navbar__nav is-actdive">
+            <ul id="js-menu" class="navbar__nav">
                 <li class="nav__item active"><a href="#" class="nav__link">Product</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
