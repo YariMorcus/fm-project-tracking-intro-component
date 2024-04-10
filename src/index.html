@@ -31,8 +31,48 @@
     <!-- <meta name="twitter:image" content="../screenshot.png"> -->
     <meta name="twitter:image:alt" content="A screenshot of the page">
 
+    <script>
+        // If JS is available, add class to hide navigation menu
+        document.documentElement.classList.add('js');
+    </script>
+
 </head>
 <body>
+
+    <header class="header">
+        <a href="/" class="logo">
+            <img class="logo__img" src="img/logo.png" srcset="img/logo.svg" width="32" height="32" alt="Go to homepage">
+        </a> <!-- .logo -->
+
+        <nav class="navbar" role="navigation">
+            <button id="js-toggle" class="navbar__toggler" aria-expanded="false" aria-controls="js-menu">
+                <span class="navbar__toggler-text">Menu</span>
+            </button> <!-- .navbar__toggler-->
+
+            <ul id="js-menu" class="navbar__nav">
+                <li class="nav__item active"><a href="#" class="nav__link">Product</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
+                <li class="nav__divider"></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--login">Login</a></li>
+            </ul> <!-- .navbar__nav -->
+        </nav> <!-- .nav -->
+    </header> <!-- .header -->
+
+    <main>
+        <div class="illustration devices"></div>
+        <div class="section introduction">
+            <article class="article">
+                <p class="article__new"><span class="article__new-label">New</span> monograph dashboard</p>
+                <h1 class="article__heading">Powerful insights into your team</h1>
+                <p class="article__text">Project planning and time tracking for agile teams</p>
+                <div class="article__demo-container">
+                    <button class="btn btn__primary mr-3-sm"><span class="btn__text">Schedule a demo</span></button>
+                    <p class="article__text--preview">To see a preview</p>
+                </div> <!-- .article__demo-container -->
+            </article> <!-- .article -->
+        </div> <!-- .introduction -->
+    </main>
 
     <footer class="footer">
         Challenge by <a class="footer__link" rel="noopener noreferrer" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

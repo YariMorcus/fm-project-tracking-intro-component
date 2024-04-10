@@ -1,17 +1,28 @@
+@use '../abstracts/variables' as v;
+
 .footer {
   padding: 0 1.28rem 1.28rem;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 1.2rem;
   text-align: center;
 
-  // &__link {
-  //   &:hover {
-  //   }
+  &__link {
+    &:visited {
+      color: v.$footer-link-text-color-visited;
+    }
 
-  //   &:focus-visible {
-  //     border-radius: 1px;
-  //   }
-  // }
+    &:hover {
+      color: v.$footer-link-text-color-hover;
+    }
+
+    &:active {
+      color: v.$footer-link-text-color-active;
+    }
+
+    &:focus-visible {
+      border-radius: 0.1rem;
+    }
+  }
 }
 
 // .noscript {

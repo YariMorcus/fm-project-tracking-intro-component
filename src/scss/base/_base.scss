@@ -4,6 +4,8 @@
 // Import mixins
 @use '../abstracts/mixins' as m;
 
+@use './typography' as t;
+
 /* Set core root defaults */
 html {
   font-size: 10px;
@@ -16,15 +18,41 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  max-width: 130rem;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
   text-rendering: optimizeSpeed;
   font-family: 'Manrope', sans-serif;
+  font-size: t.$body-copy-font-size;
   line-height: 1.5;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50vw;
+    height: 43rem;
+    background-color: v.$light-grayish-blue;
+    border-bottom-left-radius: 7rem;
+    z-index: -1;
+
+    @include m.breakpoint-xl {
+      width: 70rem;
+    }
+  }
+
+  @include m.breakpoint-xl {
+    position: relative;
+  }
 }
 
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex: 1;
 }
@@ -32,6 +60,16 @@ main {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+a,
+button {
+  &:focus-visible {
+    outline-color: v.$very-dark-blue;
+    outline: 2px solid v.$very-dark-blue;
+    outline-offset: 0.5rem;
+    border-radius: 0.1rem;
+  }
 }
 
 /* Make images easier to work with */
@@ -49,5 +87,15 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+.js {
+  body::after {
+    height: 27rem;
+
+    @include m.breakpoint-sm {
+      height: 43rem;
+    }
   }
 }

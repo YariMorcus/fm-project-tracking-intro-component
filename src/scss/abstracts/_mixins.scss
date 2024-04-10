@@ -12,6 +12,20 @@
   }
 }
 
+// Desktop - 991px
+@mixin breakpoint-lg() {
+  @media (min-width: 61.938rem) {
+    @content;
+  }
+}
+
+// Large desktop - 1280px
+@mixin breakpoint-xl() {
+  @media (min-width: 80rem) {
+    @content;
+  }
+}
+
 // Landscape - orientation
 @mixin orientation-landscape() {
   @media (orientation: Landscape) {

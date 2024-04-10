@@ -1,0 +1,138 @@
+// Import modules
+@use '../abstracts/variables' as v;
+@use '../base/typography' as t;
+@use '../abstracts/mixins' as m;
+
+.navbar {
+  &__toggler {
+    display: none;
+    cursor: pointer;
+  }
+
+  &__nav {
+    margin-bottom: 0;
+    padding: 2.5rem;
+    list-style: none;
+    background-color: v.$navbar-nav-background-color;
+    border-radius: 0.4rem;
+    box-shadow: 0px 8px 20px 0px v.$navbar-nav-box-shadow-color;
+
+    @include m.breakpoint-md {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      box-shadow: initial;
+    }
+  }
+}
+
+.nav {
+  &__item {
+    text-align: center;
+  }
+
+  &__divider {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 0.1rem solid v.$navbar-nav-divider-border-color;
+
+    @include m.breakpoint-md {
+      border-width: 0.2rem;
+      border-radius: 100%;
+    }
+  }
+
+  &__item,
+  &__divider {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include m.breakpoint-md {
+      margin-left: 2rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 100%;
+    font: bold t.$body-copy-font-size 'Barlow Condensed';
+    color: v.$navbar-nav-link-text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    &:hover {
+      border-bottom: 1px solid;
+    }
+
+    &--login {
+      color: v.$navbar-nav-link-login-text-color;
+    }
+
+    &:focus-visible {
+      display: inline-block;
+      outline: 0.2rem solid v.$navbar-nav-link-focus-visible-outline-color;
+      outline-offset: 0.6rem;
+      border-radius: 0.1rem;
+    }
+  }
+}
+
+.js {
+  .navbar {
+    &__nav {
+      margin-bottom: 4rem;
+      display: none;
+
+      @include m.breakpoint-md {
+        display: flex;
+        margin-bottom: 0;
+      }
+    }
+
+    &__toggler {
+      position: relative;
+      right: -1rem;
+      display: block;
+      width: 4.4rem;
+      height: 4.4rem;
+      background: center / 2.4rem 1.6rem no-repeat
+        url('../img/icon-hamburger.svg') transparent;
+      border: none;
+
+      &-text {
+        position: absolute;
+        padding: 0;
+        width: 0.1rem;
+        height: 0.1rem;
+        border: 0;
+        overflow: hidden;
+        clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+      }
+
+      &.is-expanded {
+        background: center / 2rem 2rem no-repeat url('../img/icon-close.svg')
+          transparent;
+      }
+
+      @include m.breakpoint-md {
+        display: none;
+      }
+    }
+  }
+}
+
+.js {
+  .navbar__nav {
+    &.is-active {
+      position: absolute;
+      right: 0;
+      left: 0;
+      display: block;
+      z-index: 9;
+    }
+  }
+}

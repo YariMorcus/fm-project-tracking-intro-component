@@ -1,0 +1,88 @@
+// Import modules
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.article {
+  margin: 0 3rem;
+  font-family: 'Barlow Condensed';
+
+  &__new {
+    margin-bottom: 2rem;
+    color: v.$article-new-text-color;
+    letter-spacing: 0.4rem;
+  }
+
+  &__new,
+  &__heading {
+    text-transform: uppercase;
+  }
+
+  &__new-label {
+    margin-right: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: v.$article-new-label-text-color;
+    letter-spacing: 0.1rem;
+    background-color: v.$article-new-label-background-color;
+    border-radius: 2rem;
+
+    @include m.breakpoint-lg {
+      margin-right: 2rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 1;
+
+    @include m.breakpoint-lg {
+      margin-bottom: 3rem;
+      font-size: 6.5rem;
+    }
+  }
+
+  &__demo-container {
+    margin-bottom: 6rem;
+
+    @include m.breakpoint-sm {
+      display: flex;
+    }
+
+    @include m.breakpoint-lg {
+      justify-content: initial;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: v.$article-text-color;
+
+    &--preview {
+      color: v.$article-preview-text-color;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 4.133rem; // height of container
+      letter-spacing: 1px;
+
+      @include m.breakpoint-lg {
+        letter-spacing: 0.4rem;
+      }
+    }
+
+    @include m.breakpoint-sm {
+      padding-right: 4rem;
+    }
+
+    @include m.breakpoint-lg {
+      margin-bottom: 5rem;
+      padding-right: 25rem;
+      width: initial;
+    }
+
+    @include m.breakpoint-xl {
+      padding-right: 30rem;
+    }
+  }
+}

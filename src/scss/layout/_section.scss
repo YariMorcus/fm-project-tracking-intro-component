@@ -1,0 +1,12 @@
+// Import modules
+@use '../abstracts/mixins' as m;
+
+.section {
+  &.introduction {
+    @include m.breakpoint-lg {
+      width: 50%;
+      margin-right: auto;
+      margin-left: 3rem;
+    }
+  }
+}

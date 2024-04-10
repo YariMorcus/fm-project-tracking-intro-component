@@ -1,2 +1,11 @@
+// Forward article file when _index.scss is @used
+@forward 'article';
+
 // Forward button file when _index.scss is @used
 @forward 'button';
+
+// Forward illustration file when _index.scss is @used
+@forward 'illustration';
+
+// Forward logo file when _index.scss is @used
+@forward 'logo';
