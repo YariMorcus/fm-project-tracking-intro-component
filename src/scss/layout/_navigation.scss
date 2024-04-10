@@ -13,9 +13,9 @@
     margin-bottom: 0;
     padding: 2.5rem;
     list-style: none;
-    background-color: v.$white;
+    background-color: v.$navbar-nav-background-color;
     border-radius: 0.4rem;
-    box-shadow: 0px 8px 20px 0px rgba(91, 95, 113, 0.2);
+    box-shadow: 0px 8px 20px 0px v.$navbar-nav-box-shadow-color;
 
     @include m.breakpoint-md {
       margin: 0;
@@ -37,7 +37,7 @@
   &__divider {
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    border: 0.1rem solid hsl(231, 7%, 65%); // TODO change color to non-existing var.
+    border: 0.1rem solid v.$navbar-nav-divider-border-color;
 
     @include m.breakpoint-md {
       border-width: 0.2rem;
@@ -59,7 +59,7 @@
     display: inline-block;
     width: 100%;
     font: bold t.$body-copy-font-size 'Barlow Condensed';
-    color: v.$very-dark-blue;
+    color: v.$navbar-nav-link-text-color;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -69,12 +69,12 @@
     }
 
     &--login {
-      color: v.$grayish-blue;
+      color: v.$navbar-nav-link-login-text-color;
     }
 
     &:focus-visible {
       display: inline-block;
-      outline: 0.2rem solid v.$very-dark-blue;
+      outline: 0.2rem solid v.$navbar-nav-link-focus-visible-outline-color;
       outline-offset: 0.6rem;
       border-radius: 0.1rem;
     }
